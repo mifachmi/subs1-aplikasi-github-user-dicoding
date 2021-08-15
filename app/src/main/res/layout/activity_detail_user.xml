@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailUser">
+
+    <LinearLayout
+        android:id="@+id/container_satu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/foto_detail"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            tools:src="@tools:sample/avatars"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/container_dua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints,RtlSymmetry">
+
+            <TextView
+                android:id="@+id/fullNameDetail"
+                android:layout_width="wrap_content"
+                android:maxLines="2"
+                android:layout_height="wrap_content"
+                android:text="@string/full_name"
+                tools:ignore="RtlSymmetry"
+                android:layout_marginBottom="4dp"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="@font/manrope_extrabold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/usernameDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center_vertical"
+                android:text="@string/username"
+                android:textColor="?android:textColorPrimary"
+                android:fontFamily="@font/manrope_bold"
+                android:textSize="16sp"
+                tools:ignore="RtlCompat,RtlHardcoded" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_tiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_satu"
+        tools:ignore="MissingConstraints,NotSibling">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="32sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/repository"
+                android:fontFamily="@font/manrope_bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvRepoDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/repository"
+                android:fontFamily="@font/manrope_medium"
+                android:layout_gravity="center"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/txtfollowers"
+                android:fontFamily="@font/manrope_bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvFollowersDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/txtfollowers"
+                android:fontFamily="@font/manrope_medium"
+                android:layout_gravity="center"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/txtfollowing"
+                android:fontFamily="@font/manrope_bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvFollowingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/txtfollowing"
+                android:fontFamily="@font/manrope_medium"
+                android:layout_gravity="center"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/container_tiga"
+        android:layout_marginTop="4dp"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:text="@string/more_detail_about_users"
+            android:fontFamily="@font/manrope_bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <TableRow
+            android:paddingTop="8dp">
+            <TextView android:text="@string/company"
+                android:fontFamily="@font/manrope_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvComDetail"
+                android:text="@string/dash"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/manrope_medium"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="8dp">
+            <TextView
+                android:text="@string/location"
+                android:fontFamily="@font/manrope_bold"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tvLocDetail"
+                android:text="@string/dash"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/manrope_medium"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

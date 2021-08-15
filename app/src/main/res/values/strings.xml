@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">SubmissionGithubUser</string>
+    <string name="app_name">Github User</string>
+    <string name="tvTitleSplash">Submission Github User</string>
+    <string name="created_by_fachmi_dimas_ardhana">Created by Fachmi Dimas Ardhana</string>
+    <string name="full_name">Full Name</string>
+    <string name="username">Username : </string>
+    <string name="following">Following : </string>
+    <string name="followers">Followers : </string>
+    <string name="dash">-</string>
+    <string name="repository">Repository</string>
+    <string name="txtfollowers">Followers</string>
+    <string name="txtfollowing">Following</string>
+    <string name="more_detail_about_users">More Detail About Users</string>
+    <string name="company">Company :</string>
+    <string name="location">Location :</string>
+
 </resources>

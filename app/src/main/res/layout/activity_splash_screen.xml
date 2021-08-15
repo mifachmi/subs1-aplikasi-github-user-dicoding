@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.245"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/ivGithub"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/github_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:text="@string/tvTitleSplash"
+            android:fontFamily="@font/manrope_bold"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"
+            tools:ignore="MissingConstraints"
+            android:layout_marginBottom="16dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCreator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/idcamp_circle"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="274dp"
+            tools:layout_editor_absoluteY="189dp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/android_logo"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="264dp"
+            tools:layout_editor_absoluteY="96dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCreator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/created_by_fachmi_dimas_ardhana"
+        android:fontFamily="@font/manrope_medium"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
