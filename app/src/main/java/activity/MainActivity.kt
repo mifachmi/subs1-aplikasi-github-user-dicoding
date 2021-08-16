@@ -1,4 +1,4 @@
-package com.example.submissiongithubuser
+package activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.submissiongithubuser.R
+import adapter.UsersAdapter
+import model.DataUsers
+import model.Users
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,20 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         listUsersAdapter.setOnItemClickCallback(object : UsersAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Users) {
-
-                val user = Users(
-                    data.photoUser,
-                    data.fullname,
-                    data.username,
-                    data.amountRepository,
-                    data.amountFollowers,
-                    data.amountFollowing,
-                    data.company,
-                    data.location
-                )
-
-                val moveWithObjectIntent = Intent(this@MainActivity, DetailUser::class.java)
-                moveWithObjectIntent.putExtra(DetailUser.EXTRA_USER, user)
+                val moveWithObjectIntent = Intent(this@MainActivity, DetailUserActivity::class.java)
+                moveWithObjectIntent.putExtra(DetailUserActivity.EXTRA_USER, data)
                 startActivity(moveWithObjectIntent)
             }
         })

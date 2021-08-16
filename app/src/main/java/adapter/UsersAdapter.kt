@@ -1,13 +1,12 @@
-package com.example.submissiongithubuser
+package adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import com.example.submissiongithubuser.R
+import com.example.submissiongithubuser.databinding.ItemRecycleUserBinding
+import model.Users
 
 class UsersAdapter(private val listUser: ArrayList<Users>) : RecyclerView.Adapter<UsersAdapter.RecycleViewHolder>() {
 
@@ -18,11 +17,15 @@ class UsersAdapter(private val listUser: ArrayList<Users>) : RecyclerView.Adapte
     }
 
     class RecycleViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var ivFoto: ImageView = itemView.findViewById(R.id.civUtama)
-        var tvFullName: TextView = itemView.findViewById(R.id.fullNameUtama)
-        var tvUsername: TextView = itemView.findViewById(R.id.usernameUtama)
-        var tvFollowers: TextView = itemView.findViewById(R.id.tvFollowerUtama)
-        var tvFollowing: TextView = itemView.findViewById(R.id.tvFollowingUtama)
+        private val binding = ItemRecycleUserBinding.bind(itemView)
+
+        fun bind(user: Users) {
+            binding.civUtama.setImageResource(user.photoUser)
+            binding.fullNameUtama.text = user.fullname
+            binding.usernameUtama.text = user.username
+            binding.tvFollowerUtama.text = user.amountFollowers
+            binding.tvFollowingUtama.text = user.amountFollowing
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecycleViewHolder {
@@ -33,16 +36,7 @@ class UsersAdapter(private val listUser: ArrayList<Users>) : RecyclerView.Adapte
     override fun onBindViewHolder(holder: RecycleViewHolder, position: Int) {
         val users = listUser[position]
 
-        Glide.with(holder.itemView.context)
-            .load(users.photoUser)
-            .apply(RequestOptions().override(500, 500))
-            .into(holder.ivFoto)
-
-        holder.tvFullName.text = users.fullname
-        holder.tvUsername.text = users.username
-        holder.tvFollowers.text = users.amountFollowers
-        holder.tvFollowing.text = users.amountFollowing
-
+        holder.bind(users)
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listUser[holder.absoluteAdapterPosition]) }
     }

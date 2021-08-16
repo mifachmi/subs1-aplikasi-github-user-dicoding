@@ -1,4 +1,6 @@
-package com.example.submissiongithubuser
+package model
+
+import com.example.submissiongithubuser.R
 
 object DataUsers {
 

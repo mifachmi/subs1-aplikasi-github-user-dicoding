@@ -1,16 +1,13 @@
-package com.example.submissiongithubuser
+package activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.submissiongithubuser.databinding.ActivityDetailUserBinding
+import model.Users
 
-class DetailUser : AppCompatActivity() {
+class DetailUserActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailUserBinding
-
-    companion object {
-        const val EXTRA_USER = "extra_user"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,18 +18,24 @@ class DetailUser : AppCompatActivity() {
         supportActionBar?.title = user.username
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.fullNameDetail.text = user.fullname
-        binding.fotoDetail.setImageResource(user.photoUser)
-        binding.usernameDetail.text = user.username
-        binding.tvRepoDetail.text = user.amountRepository
-        binding.tvFollowersDetail.text = user.amountFollowers
-        binding.tvFollowingDetail.text = user.amountFollowing
-        binding.tvComDetail.text = user.company
-        binding.tvLocDetail.text = user.location
+        binding.apply {
+            fullNameDetail.text = user.fullname
+            fotoDetail.setImageResource(user.photoUser)
+            usernameDetail.text = user.username
+            tvRepoDetail.text = user.amountRepository
+            tvFollowersDetail.text = user.amountFollowers
+            tvFollowingDetail.text = user.amountFollowing
+            tvComDetail.text = user.company
+            tvLocDetail.text = user.location
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    companion object {
+        const val EXTRA_USER = "extra_user"
     }
 }

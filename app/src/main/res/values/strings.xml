@@ -13,5 +13,9 @@
     <string name="more_detail_about_users">More Detail About Users</string>
     <string name="company">Company :</string>
     <string name="location">Location :</string>
+    <string name="logo_github">Logo Github</string>
+    <string name="foto_detail">Foto Detail</string>
+    <string name="foto_idcamp">Foto IDCamp</string>
+    <string name="foto_android">foto android</string>
 
 </resources>

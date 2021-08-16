@@ -25,7 +25,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/logo_github" />
 
         <TextView
             android:id="@+id/tvJudul"
@@ -62,7 +63,8 @@
             android:src="@drawable/idcamp_circle"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="274dp"
-            tools:layout_editor_absoluteY="189dp" />
+            tools:layout_editor_absoluteY="189dp"
+            android:contentDescription="@string/foto_idcamp" />
 
         <ImageView
             android:layout_width="50dp"
@@ -70,7 +72,8 @@
             android:src="@drawable/android_logo"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="264dp"
-            tools:layout_editor_absoluteY="96dp" />
+            tools:layout_editor_absoluteY="96dp"
+            android:contentDescription="@string/foto_android" />
 
     </LinearLayout>
 
